@@ -4,3 +4,5 @@
 - `DAY 2:` JavaScript Operators
 - `DAY 3:` Control Structures
 - `DAY 4:` javaScript Loops
+- `DAY 5:` javaScript Functions
+- `DAY 6:` javaScript Arrays
