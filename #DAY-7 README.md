@@ -18,30 +18,38 @@
    - Task 8: Use a `for...in` loop to iterate over the properties of the book object and log each property and its value.
    - Tase 9: Use `Object.keys` and `Object.values` methods to log all the keys and values of the book object.
 6. [Feature Request](#feature-request)
-   - 1. Array Manipulation Script
-   - 2. Array Transformation Script
-   - 3. Array Iteration Script
-   - 4. Two-dimensional Array Script
+   - 1. Book Object Script
+   - 2. Library Object Script
+   - 3. Object Iteration Script
 7. [Achievements](#achievements)
 
-## Activity 1: Array Creation and Access
+## Activity 1: Object Creation and Access
 
-**Task 1:** Create an array of numbers from 1 to 5 and log the array to the console.
-
-```javascript
-let arr = [1,2,3,4,5];
-console.log(arr); //Output : [ 1, 2, 3, 4, 5 ]
-```
-
-**Task 2:** Access the first and last elements of the array and log them to the console.
+**Task 1:** Create an Object representing a book with properties like title, author, and year, and log the object to the console.
 
 ```javascript
-let arr = [1,2,3,4,5,6];
-console.log(arr[0]);  //Output : 1
-console.log(arr.length-1); //Output : 5
+let book = {
+    title : "JavaScript with Chai",
+    author : "HC",
+    year : 2024
+};
+console.log(book);
+//Output : { title: 'JavaScript with Chai', author: 'HC', year: 2024 }
 ```
 
-## Activity 2: Array Methods (Basic)
+**Task 2:** Access and log the title and author properties of the book object.
+
+```javascript
+let book = {
+    title : "JavaScript with Chai",
+    author : "HC",
+    year : 2024
+};
+console.log(book.title); //Output: JavaScript with Chai
+console.log(book.author); //Output: HC
+```
+
+## Activity 2: Object Methods 
 
 **Task 3:** Use the push method to add a new number to the end of the array and log the updated array.
 
