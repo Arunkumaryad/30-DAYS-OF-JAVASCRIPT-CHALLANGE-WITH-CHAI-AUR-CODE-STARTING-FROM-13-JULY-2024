@@ -6,3 +6,4 @@
 - `DAY 4:` javaScript Loops
 - `DAY 5:` javaScript Functions
 - `DAY 6:` javaScript Arrays
+- `DAY 7:` JavaScript Objects
