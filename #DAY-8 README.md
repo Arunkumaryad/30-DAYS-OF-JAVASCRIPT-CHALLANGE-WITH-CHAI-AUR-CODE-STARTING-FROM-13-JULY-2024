@@ -19,163 +19,146 @@
    - Task 8: Use enhanced object literals to create an object with method and properties, and log the object to the console.
    - Tase 9: Create an Object with computed property names based on variables and log the object to the console.
 6. [Feature Request](#feature-request)
-   - 1. Array Manipulation Script
-   - 2. Array Transformation Script
-   - 3. Array Iteration Script
-   - 4. Two-dimensional Array Script
+   - 1. Template Literals Script
+   - 2. Destructuring Script
+   - 3. Spread and Rest Operator Script
+   - 4. Default Parameters Script
+   - 5. Enhanced Object Literals Script
 7. [Achievements](#achievements)
 
-## Activity 1: Array Creation and Access
+## Activity 1: Template Literals
 
-**Task 1:** Create an array of numbers from 1 to 5 and log the array to the console.
+**Task 1:** Use template literal to create a string that includes variables for a person's name and age, and log the string to the console.
 
 ```javascript
-let arr = [1,2,3,4,5];
-console.log(arr); //Output : [ 1, 2, 3, 4, 5 ]
+const name = "John Due";
+const age = 25;
+console.log(`My name is ${name} and I am ${age} years old.`)
+//Output: My name is John Due and I am 25 years old.
 ```
 
-**Task 2:** Access the first and last elements of the array and log them to the console.
+**Task 2:** Create a multi-line string using template literals and log it to the console.
 
 ```javascript
-let arr = [1,2,3,4,5,6];
-console.log(arr[0]);  //Output : 1
-console.log(arr.length-1); //Output : 5
+const str = `My name is John Due.
+I am a B.Tech Passout Student.
+Now I am exploring DSA`;
+console.log(str);
+/* Output: My name is John Due.
+I am a B.Tech Passout Student.
+Now I am exploring DSA */
 ```
 
-## Activity 2: Array Methods (Basic)
+## Activity 2: Destructuring
 
-**Task 3:** Use the push method to add a new number to the end of the array and log the updated array.
+**Task 3:** Use array Destructuring to extract the first and second elements from an array of numbers and log them to the console.
 
 ```javascript
-let arr = [1,2,3,4,5];
-arr.push(10);
-console.log(arr); //Output : [ 1, 2, 3, 4, 5, 10 ]
+let arr = [10,20,30,40,50];
+let [first,second] = arr;
+console.log(`First element is: ${first} and second element is: ${second}`);
+//Output: First element is: 10 and second element is: 20
 ```
 
-**Task 4:** Use the pop method to remove the last element from the array and log the updated array.
+**Task 4:** Use object destructuring to extract the title and author from a book object and log them to the console.
 
 ```javascript
-let arr = [2,4,6,8,10];
-arr.pop();
-console.log(arr); //Output : [ 2, 4, 6, 8 ]
-```
-
-**Task 5:** Use the shift method to remove the first element from the array and log the updated array.
-
-```javascript
-let arr = [1,2,3,4,5];
-arr.shift();
-console.log(arr); //Output : [ 2, 3, 4, 5 ]
-```
-
-**Task 6:** Use the unshift method to add a new number to the beginning of the array and log the updated array.
-
-```javascript
-let arr = [2,4,6,8];
-arr.unshift(10);
-console.log(arr); //Output : [ 10, 2, 4, 6, 8 ]
-```
-
-## Activity 3: Array Methods (Intermediate)
-
-**Task 7:** Use the map method to create a new array where each number is doubled and log the new array.
-
-```javascript
-let arr = [1,2,3,4,5];
-let newArr = arr.map((num) => num*2);
-console.log(newArr); //Output : [ 2, 4, 6, 8, 10 ]
-```
-
-**Task 8:** Write an arrow function to check if a string contains a specific characters and return a boolean value.
-
-```javascript
-let arr = [1,2,4,6,8];
-let newArr = arr.filter((num) => num%2 == 0);
-console.log(newArr); // output : [ 2, 4, 6, 8 ]
-```
-
-**Task 9:** Use the reduce method to calculate the sum of all numbers in the array and log the result.
-
-```javascript
-let arr = [1,2,3,4,5];
-let sum = arr.reduce((accumulator,currValue) => accumulator + currValue)
-console.log(sum); // Output : 15
-```
-
-## Activity 4: Array Iteration
-
-**Task 10:** Use a for loop to iterate over the array and log each element to the console.
-
-```javascript
-let arr = [1,2,3,4,5];
-let n = arr.length;
-for(let i=0;i<n;i++) {
-    console.log(arr[i]);
+const book = {
+    title: "JavaScript with masti",
+    author: "HC",
+    year: 2024
 }
-/* Expected Output : 
-1
-2
-3
-4
-5 */
+const {title, author} = book;
+console.log(`Title is: ${title} and Author is: ${author}`);
+//Output: Title is: JavaScript with masti and Author is: HC
 ```
 
-**Task 11:** Use the forEach method to iterate over the array and log each element to the console.
+
+## Activity 3: Spread and Rest Operators.
+
+**Task 5:** Use the spread operator to create a new array that includes all elements of an exsiting array plus additional elements, and log the new array to the console.
 
 ```javascript
-let arr = [1,2,3,4,5];
-arr.forEach((ele) => console.log(ele));
-/* Expected Output : 
-1
-2
-3
-4
-5 */
+const arr = [10,20,30];
+const newArr = [...arr,50,60,80];
+console.log(newArr); //Output : [ 10, 20, 30, 50, 60, 80 ]
 ```
 
-## Activity 5: Multi-dimensional Arrays
-
-**Task 12:** Create a two-dimensional array (matrix) and log the entire array to the console.
+**Task 6:** WUse the rest operator in a function to accept an arbitary number of arguments, sum them, and return the result.
 
 ```javascript
-let arr = [
-     [1,2,3,4],
-     [5,6,7,8],
-     [9,10,11,12]
-    ];
-console.log(arr);
-/* Expected Outpuut : 
-[ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ], [ 9, 10, 11, 12 ] ] */
+function sum(...num) {
+    return num.reduce((ans,n) => ans+n,0);
+}
+console.log(sum(1,2,3,4,5)); // Output: 15
 ```
 
-**Task 13:** Access and log a specific element from the two-dimensional array.
+
+## Activity 4: Default Parameters
+
+**Task 7:** Write a function that takes two parameters and returns their product, with the second parameter having a default value of 1. Log the result of calling this 
+             function with without the second parameter
 
 ```javascript
-let matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-];
-let element = matrix[2][2];
-console.log(element); //Output : 9
+function multiplication(n1,n2=1) {
+    return n1*n2;
+}
+console.log(multiplication(5)); //Output: 5
+console.log(multiplication(10,25)); //Output: 250
+```
+
+
+## Activity 5: Enhanced Object Literals
+
+**Task 8:** Use enhanced object literals to create an object with method and properties, and log the object to the console.
+
+```javascript
+const name = "Arun Kumar";
+const age = 24;
+const person = {
+    name,
+    age,
+    greeting() {
+        console.log(`My name is ${this.name} and I am ${this.age} Years old.`);
+    }
+};
+console.log(person); 
+person.greeting();
+/* output: 
+{ name: 'Arun Kumar', age: 24, greeting: [Function: greeting] }
+My name is Arun Kumar and I am 24 Years old. */
+```
+
+**Task 9:** Create an Object with computed property names based on variables and log the object to the console.
+
+```javascript
+const key = "favourite youtuber";
+const value = "Elvish Yadav";
+const Best = {
+    [key] : value
+}
+console.log(Best); 
+//Output: { 'favourite youtuber': 'Elvish Yadav' }
 ```
 
 ## Feature Request:
 
-1. Write a script that demonstrates the creation of an array, adding and removing elements using push, pop, shift, and unshift methods.
+1. Write a script that demonstrates the use of template literals to create and log strings with embedded variables and multi-line strings.
 
-2. Create a script that uses map, filter, and reduce methods to transform and aggregate array data.
+2. Create a script that uses array and object destructuring to extract values and log them.
 
-3. Write a script that iterates over an array using both for loop and forEach method and logs each element.
+3. Write a script that demonstrates the use of the spread operator to combine arrays and the rest operator to handle multiple function arguments.
 
-4. Create a script that demonstrates the creation and manipulation of a two-dimensional array.
+4. Create a script that defines a function with default parameters and logs the results of calling it with different arguments.
+5. Write a script that uses enhanced object literals to create and log an object with methods and computed property names.
 
 
 ## Achievements:
 
 By the end of these activities, students will:
 
-- Create and manipulate arrays using various methods.
-- Transform and aggregate array data using map, filter, and reduce.
-- Iterate over arrays using loops and iteration methods.
-- Understand and work with multi-dimensional arrays.
+- Understand and use template literals for string interpolation and multi-line strings.
+- Utilize array and object destructuring to extract values from arrays and objects.
+- Apply the spread and rest operators for various use cases including function arguments and array manipulation.
+- Implement default parameters in functions.
+- Create and manage objects with enhanced object literals for cleaner and more concise code.
