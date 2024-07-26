@@ -7,3 +7,6 @@
 - `DAY 5:` javaScript Functions
 - `DAY 6:` javaScript Arrays
 - `DAY 7:` JavaScript Objects
+- `DAY 8:` JavaScript ES6 + Features
+- `DAY 9:` JavaScript DOM Manipulation
+- `DAY 10:` JavaScript Event Handling
