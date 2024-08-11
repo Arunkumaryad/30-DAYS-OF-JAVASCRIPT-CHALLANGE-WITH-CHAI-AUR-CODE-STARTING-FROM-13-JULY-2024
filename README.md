@@ -10,3 +10,4 @@
 - `DAY 8:` JavaScript ES6 + Features
 - `DAY 9:` JavaScript DOM Manipulation
 - `DAY 10:` JavaScript Event Handling
+- `DAY 11:` JavaScript Promises and Async: Await
